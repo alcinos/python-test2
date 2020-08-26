@@ -7,10 +7,30 @@
 
 # Current issue
 
-1. Assign the env with is working but auto completion and jump to definition is not working.
+1. Assign the env with `lsp-register-custiom-settings`
+
    ```emacs-lisp
    (lsp-register-custom-settings
    `(("python.pythonPath" "/Users/ztlevi/.conda/envs/test/bin/python")
       ("python.venvPath" "/Users/ztlevi/.conda/envs/test")))
    ```
-1. Assigne wtith the `pyrightconfig.json` file, the pytho exe path is not correct and auto completion is not working.
+
+   - The env path in lsp-log
+     ```
+     Found 4 source files
+     No configuration file found.
+     Setting pythonPath for service "python_test": "/Users/ztlevi/.conda/envs/test/bin/python"
+     ```
+   - auto completion and jump to definition is not working.
+
+2. Assigne wtith the `pyrightconfig.json` file.
+
+   - The env path in lsp-log
+
+     ```
+     Found 4 source files
+     No configuration file found.
+     Setting pythonPath for service "python_test": "/usr/local/bin/python3"
+     ```
+
+   - auto completion and jump to definition is not working.
